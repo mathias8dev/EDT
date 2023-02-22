@@ -15,9 +15,10 @@ private val DarkColorPalette = darkColors(
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = redColor,
+    primaryVariant = redColor200,
+    secondary = blueColor,
+    secondaryVariant = blueColor200
 
     /* Other default colors to override
     background = Color.White,
@@ -31,12 +32,13 @@ private val LightColorPalette = lightColors(
 
 @Composable
 fun EDTTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val colors = if (darkTheme) {
+    /*val colors = if (darkTheme) {
         DarkColorPalette
     } else {
         LightColorPalette
-    }
+    }*/
 
+    val colors = lightColors()
     MaterialTheme(
         colors = colors,
         typography = Typography,
